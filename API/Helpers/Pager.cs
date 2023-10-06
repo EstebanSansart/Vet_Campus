@@ -5,7 +5,7 @@ public class Pager<T>:IPager<T> where T : class{
     public IParam Conf { get; }
     public int Total { get;  set; }
     public List<T> Registers { get; private set; }
-    public Pager(List<T> registers, int? total, IParam conf){
+    public Pager(List<T> registers, int? total, int pageIndex, int pageSize, IParam conf){
         Registers = registers;
         Total = total?? 0;
         Conf = conf;
