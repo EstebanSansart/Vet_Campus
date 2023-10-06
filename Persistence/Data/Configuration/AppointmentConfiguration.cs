@@ -19,12 +19,10 @@ namespace Persistence.Data.Configurations
 
             builder.Property(r => r.Date)
             .IsRequired()
-            .HasColumnType("OnlyDate")
             .HasColumnName("AppointmentDate");
 
             builder.Property(r => r.Hour)
             .IsRequired()
-            .HasColumnType("OnlyTime")
             .HasColumnName("AppointmentHour");
 
             builder.Property(r => r.Reason)
