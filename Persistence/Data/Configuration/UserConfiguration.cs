@@ -44,6 +44,12 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
                 Username = "Admin",
                 Email = "admin@example.com",
                 Password = "123",
+            },
+            new{
+                Id = 2,
+                Username = "User1",
+                Email = "auser1@example.com",
+                Password = "123456",
             }
         );
     }
