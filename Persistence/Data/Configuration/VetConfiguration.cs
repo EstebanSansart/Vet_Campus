@@ -36,6 +36,25 @@ namespace Persistence.Data.Configurations
             .IsRequired()
             .HasMaxLength(50)
             .HasColumnName("VetSpecialty");
+
+            // Default Data
+
+            builder.HasData(
+                new{
+                    Id = 1,
+                    Name = "Axel",
+                    Email = "axel@example.com",
+                    PhoneNumber = "3158641239",
+                    Specialty = "Cirujano vascular"
+                },
+                new{
+                    Id = 2,
+                    Name = "Jonnah",
+                    Email = "jonnah@example.com",
+                    PhoneNumber = "3207582121",
+                    Specialty = "Oncología"
+                }
+            );
         }
     }
 }

@@ -21,6 +21,19 @@ namespace Persistence.Data.Configurations
             .IsRequired()
             .HasMaxLength(20)
             .HasColumnName("MovementTypeDescription");
+
+            // Default Data
+
+            builder.HasData(
+                new{
+                    Id = 1,
+                    Description = "Entrada",
+                },
+                new{
+                    Id = 2,
+                    Description = "Salida",
+                }
+            );
         }
     }
 }

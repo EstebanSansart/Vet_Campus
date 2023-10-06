@@ -2,8 +2,8 @@ using Domain.Entities.Generic;
 
 namespace Domain.Entities;
 public class Appointment : BaseEntity{
-    public DateOnly Date { get; set; }
-    public TimeOnly Hour { get; set; }
+    public DateTime Date { get; set; }
+    public DateTime Hour { get; set; }
     public string Reason { get; set; }
 
     public int IdPet { get; set; }

@@ -31,6 +31,23 @@ namespace Persistence.Data.Configurations
             .IsRequired()
             .HasMaxLength(20)
             .HasColumnName("LabPhoneNumber");
+
+            // Default Data
+
+            builder.HasData(
+                new{
+                    Id = 1,
+                    Name = "Lab1",
+                    Address = "calle 27A #12-13",
+                    PhoneNumber = "3165872525"
+                },
+                new{
+                    Id = 2,
+                    Name = "Lab2",
+                    Address = "auser1@example.com",
+                    PhoneNumber = "3046518974"
+                }
+            );
         }
     }
 }

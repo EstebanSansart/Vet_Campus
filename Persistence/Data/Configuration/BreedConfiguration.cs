@@ -26,6 +26,21 @@ namespace Persistence.Data.Configurations
             builder.HasOne(x => x.Species)
             .WithMany(x => x.Breeds)
             .HasForeignKey(x => x.IdSpecies);
+
+            // Default Data
+
+            builder.HasData(
+                new{
+                    Id = 1,
+                    Name = "Golden retrieves",
+                    IdSpecies = 2
+                },
+                new{
+                    Id = 2,
+                    Name = "Esfinge",
+                    IdSpecies = 1
+                }
+            );
         }
     }
 }

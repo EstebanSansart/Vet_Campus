@@ -21,6 +21,27 @@ namespace Persistence.Data.Configurations
             .IsRequired()
             .HasMaxLength(100)
             .HasColumnName("SpeciesName");
+
+            // Default Data
+
+            builder.HasData(
+                new{
+                    Id = 1,
+                    Name = "Felino",
+                },
+                new{
+                    Id = 2,
+                    Name = "Canino",
+                },
+                new{
+                    Id = 3,
+                    Name = "Ave",
+                },
+                new{
+                    Id = 4,
+                    Name = "Pez",
+                }
+            );
         }
     }
 }

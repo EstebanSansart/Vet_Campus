@@ -59,6 +59,25 @@ namespace Persistence.Data.Configurations
                     j.HasKey(t => new{t.IdMedicine, t.IdSupplier});
                 }
             );
+
+            // Default Data
+
+            builder.HasData(
+                new{
+                    Id = 1,
+                    Name = "NexGard",
+                    Stock = 745,
+                    Price = 20000.00,
+                    IdLab = 1
+                },
+                new{
+                    Id = 2,
+                    Name = "Drontal",
+                    Stock = 489,
+                    Price = 18000.00,
+                    IdLab = 2
+                }
+            );
         }
     }
 }

@@ -44,6 +44,27 @@ namespace Persistence.Data.Configurations
                     j.HasKey(t => new{t.IdRole, t.IdUser});
                 }
             );
+
+            // Default Data
+
+            builder.HasData(
+                new{
+                    Id = 1,
+                    Name = "Admin"
+                },
+                new{
+                    Id = 2,
+                    Name = "Employee"
+                },
+                new{
+                    Id = 3,
+                    Name = "Customer"
+                },
+                new{
+                    Id = 4,
+                    Name = "Supplier"
+                }
+            );
         }
     }
 }
